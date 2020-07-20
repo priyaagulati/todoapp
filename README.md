@@ -1,2 +1,2 @@
 # todoapp
-A todoapp made bu using react js
+A todoapp made using react js
