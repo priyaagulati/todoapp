@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>Todos</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                <input type="text" name="Name" placeholder="Add Todo">
+                <!-- <input type="text" name="City" placeholder="Cafe city"> -->
+                <button>Add Todo</button>
+            </form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+        
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyBYUGHu17En6PD0_kuIYh6JN2Z3HZHu_rY",
+                authDomain: "new-cafe-f46d5.firebaseapp.com",
+                databaseURL: "https://new-cafe-f46d5.firebaseio.com",
+                projectId: "new-cafe-f46d5",
+                storageBucket: "new-cafe-f46d5.appspot.com",
+                messagingSenderId: "10875236832",
+                appId: "1:10875236832:web:b91390b7169eef75b7fb85",
+                measurementId: "G-Q86QNYPVGS"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db= firebase.firestore();
+            db.settings({ timestampsInSnapshots: true});
+            firebase.analytics();
+        </script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
